@@ -1,0 +1,40 @@
+server:
+  port: 2005
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/filierdb
+    username: root
+    password:
+    jpa:
+      hibernate:
+        ddl-auto: update
+        properties:
+          hibernate:
+            dialect: org.hibernate.dialect.MySQLDialect
+            format_sql: true
+      show-sql: true
+
+    cloud:
+      config:
+        enabled: false
+
+    security:
+      oauth2:
+        resourceServer:
+          jwt:
+            issuer-uri: http://localhost:8080/realms/ismatec-realm
+            jwk-set-url: ${spring.security.oauth2.resourceServer.jwt.issuer-uri}/protocol/openid-connect/certs
+  jwt:
+    auth:
+      converter:
+        resource-Id: filier-service
+        principal-attribute: preferred_name
+
+  eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:1500/eureka
+
+
+
