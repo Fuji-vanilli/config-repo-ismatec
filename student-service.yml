@@ -3,18 +3,18 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017/student-service
 
-    security:
-      oauth2:
-        resourceServer:
-          jwt:
-            issuer-uri: http://localhost:8080/realms/ismatec-realm
-            jwk-set-url: ${spring.security.oauth2.resourceServer.jwt.issuer-uri}/protocol/openid-connect/certs
+  security:
+    oauth2:
+      resourceServer:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/ismatec-realm
+          jwk-set-url: ${spring.security.oauth2.resourceServer.jwt.issuer-uri}/protocol/openid-connect/certs
 
-  jwt:
-    auth:
-      converter:
-        resource-id: student-service
-        principal-attribute: preferred_name
+jwt:
+  auth:
+    converter:
+      resource-id: student-service
+      principal-attribute: preferred_name
 
 eureka:
   client:
