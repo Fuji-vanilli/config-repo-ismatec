@@ -31,10 +31,10 @@ spring:
         resource-Id: filier-service
         principal-attribute: preferred_name
 
-  eureka:
-    client:
-      serviceUrl:
-        defaultZone: http://localhost:1500/eureka/
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1500/eureka/
 
 
 
