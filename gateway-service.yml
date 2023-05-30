@@ -1,0 +1,17 @@
+server:
+  port: 3500
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        #student service API
+        - id: student-service
+          uri: lb://student-service
+          predicates:
+            - Path= api/student/**
+        #filier service API
+        - id: filier-service
+          uri: lb://filier-service
+          predicates:
+            - Path= api/filier/**
