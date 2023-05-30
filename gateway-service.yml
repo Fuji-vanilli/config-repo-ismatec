@@ -15,3 +15,8 @@ spring:
           uri: lb://filier-service
           predicates:
             - Path= api/filier/**
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1500/eureka/
