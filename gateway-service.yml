@@ -9,12 +9,12 @@ spring:
         - id: student-service
           uri: lb://student-service
           predicates:
-            - Path= api/student/**
+            - Path= /api/student/**
         #filier service API
         - id: filier-service
           uri: lb://filier-service
           predicates:
-            - Path= api/filier/**
+            - Path= /api/filier/**
 
 eureka:
   client:
