@@ -16,6 +16,13 @@ spring:
           predicates:
             - Path= /api/filier/**
 
+logging:
+  level:
+    root: INFO
+    org.springFramework.cloud.gateway.route.RouteDefinitionLocator: INFO
+    org.springFramework.cloud.gateway: TRACE
+
+
 eureka:
   client:
     serviceUrl:
