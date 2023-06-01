@@ -15,10 +15,6 @@ spring:
             format_sql: true
       show-sql: true
 
-    cloud:
-      config:
-        enabled: false
-
     security:
       oauth2:
         resourceServer:
