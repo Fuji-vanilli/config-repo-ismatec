@@ -15,6 +15,11 @@ spring:
           uri: lb://filier-service
           predicates:
             - Path= /api/filier/**
+        #level service API
+        - id: level-service
+          uri: lb= //level-service
+          predicates:
+            - Path= /api/level/**
 
 logging:
   level:
