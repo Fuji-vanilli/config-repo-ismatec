@@ -13,8 +13,8 @@ spring:
     password:
   jpa:
     hibernate:
+      ddl-auto: create
       properties:
-        ddl-auto: create
         hibernate:
           properties:
             dialect: org.hibernate.dialect.MySQL5Dialect
