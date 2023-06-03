@@ -1,0 +1,22 @@
+server:
+  port: 7600
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1500/eureka/
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/modaldb
+    username: root
+    password:
+  jpa:
+    hibernate:
+      properties:
+        ddl-auto: create
+        hibernate:
+          properties:
+            dialect: org.hibernate.dialect.MySQL5Dialect
+            format_sql: true
+    show-sql: true
