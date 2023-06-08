@@ -20,6 +20,15 @@ spring:
           uri: lb://level-service
           predicates:
             - Path= /api/level/**
+        #modal service API
+        - id: modal-servvice
+          uri: lb://modal-service
+          predicates:
+            - Path= /api/modal/**
+
+
+
+
 
 logging:
   level:
