@@ -6,10 +6,9 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:1500/ereuka/
 
-
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/professorDB
+    url: jdbc:mysql://localhost:3306/professordb
     username: root
     password:
   jpa:
