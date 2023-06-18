@@ -25,11 +25,11 @@ spring:
           uri: lb://modal-service
           predicates:
             - Path= /api/modal/**
-
-
-
-
-
+        #professor service API
+        - id: professor-service
+          uri: lb://professor-service
+          predicates:
+            - Path= /api/professor/**
 logging:
   level:
     root: INFO
